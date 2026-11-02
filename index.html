@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SITTA Vue: aplikasi pemesanan dan distribusi bahan ajar Universitas Terbuka.">
+  <title>Beranda | SITTA Vue</title>
+  <link rel="icon" href="assets/logo-sitta.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>try { document.documentElement.setAttribute('data-theme', localStorage.getItem('sitta-vue-tema') || 'light'); } catch (e) {}</script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo-sitta.svg" alt="">
+        <div><strong>SITTA</strong><span>Bahan Ajar UT &middot; Vue.js</span></div>
+      </a>
+      <nav class="mainnav" aria-label="Menu utama">
+        <a href="index.html" aria-current="page">Beranda</a>
+        <a href="stok.html">Stok Bahan Ajar</a>
+        <a href="tracking.html">Tracking DO</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <h1>Sistem Informasi Tiras dan Transaksi Bahan Ajar</h1>
+      <p>Aplikasi web sederhana untuk memantau stok bahan ajar di setiap UT-Daerah dan melacak
+        pengiriman Delivery Order ke mahasiswa. Dibangun dengan Vue.js 2; data diambil dari file
+        dummy <code>dataBahanAjar.js</code>, tanpa database.</p>
+    </section>
+
+    <div class="menu-grid">
+      <a class="menu-card" href="stok.html">
+        <span class="icon" aria-hidden="true">&#128218;</span>
+        <h2>Stok Bahan Ajar</h2>
+        <p class="muted">Daftar stok seluruh UT-Daerah beserta status aman, menipis, dan kosong.</p>
+        <ul>
+          <li>Filter UT-Daerah &rarr; kategori (dependent filter)</li>
+          <li>Daftar re-order, sort judul/stok/harga, reset</li>
+          <li>Tambah dan edit bahan ajar dengan validasi</li>
+        </ul>
+        <span class="go">Buka halaman stok &rarr;</span>
+      </a>
+
+      <a class="menu-card" href="tracking.html">
+        <span class="icon" aria-hidden="true">&#128666;</span>
+        <h2>Tracking Delivery Order</h2>
+        <p class="muted">Lacak status pengiriman paket bahan ajar dan catat DO baru.</p>
+        <ul>
+          <li>Nomor DO otomatis: DO + tahun + urutan</li>
+          <li>Detail isi paket muncul setelah paket dipilih</li>
+          <li>Total harga terisi otomatis dari data paket</li>
+        </ul>
+        <span class="go">Buka halaman tracking &rarr;</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    SITTA Vue &middot; Tugas Praktik 2 STSI4209 Pemrograman Berbasis Web &middot; Universitas Terbuka
+  </footer>
+</body>
+</html>
